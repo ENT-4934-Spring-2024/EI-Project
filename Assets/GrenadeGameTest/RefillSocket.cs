@@ -5,6 +5,7 @@ public class AutoCreateObjectOnGrab : MonoBehaviour
 {
     public GameObject objectToCreate; // The object to instantiate
 
+
     // This method will be called whenever an interactor selects this socket
     public void OnSelectEntered(XRBaseInteractor interactor)
     {
@@ -13,6 +14,7 @@ public class AutoCreateObjectOnGrab : MonoBehaviour
         {
             // Instantiate the object at the socket's position and rotation
             GameObject createdObject = Instantiate(objectToCreate, transform.position, transform.rotation);
+             
 
             // You may want to parent the created object to the interactor's transform
             createdObject.transform.parent = interactor.transform;
@@ -22,4 +24,5 @@ public class AutoCreateObjectOnGrab : MonoBehaviour
             Debug.LogWarning("Object to create is not assigned in the inspector.");
         }
     }
+
 }

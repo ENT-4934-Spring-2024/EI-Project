@@ -1,52 +1,55 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
+using System.Threading;
 
-public class ExplosionSimulation : MonoBehaviour
+public class SimpleExplosion : MonoBehaviour
 {
     public Shader explosionShader; // Shader for explosion particles
     public int numberOfParticles = 100; // Number of particles to emit
     public float explosionForce = 10f; // Force of the explosion applied to particles
-    public float explosionRadius = 5f; // Radius of the explosion
-    public bool removeObjectOnExplosion = false; // Remove the object when exploded
+    public bool removeObjectOnExplosion = true; // Remove the object when exploded
     public ScaleDecrease particleScaleScript; // Reference to the ScaleDecrease script
-    public float falloffFactor = 1f; // Factor controlling the falloff of explosion force
+
 
     // Countdown Mode Settings
     public bool countdownMode = true; // Toggle between countdown mode and instant mode
     public float countdownDuration = 3f; // Countdown duration in seconds
+
+    private bool countdownSet = false; // Countdown prep ready
 
     // Instant Mode Settings
     public bool instantMode = false; // Toggle between countdown mode and instant mode
 
     private bool hasExploded = false;
     private List<GameObject> particles = new List<GameObject>(); // List to store the emitted particles
-    private float countdownTimer; // Countdown timer variable
+    private float countdownTimer; // Internal countdown timer variable
 
-    public ForceFalloff forceFalloffScript; // Reference to the ForceFalloff script
 
-    public void Start()
+    public void GrenadeStart()
     {
-        
-    }
-
-    public void GrabGrenade()
-    {
-        Debug.Log(this.gameObject.name);
-        countdownTimer = countdownDuration; // Initialize countdown timer
-        countdownMode = true;
         if (instantMode)
         {
             Explode();
         }
+        
+
+        if (countdownDuration > 0 && !countdownMode && !instantMode)
+        {
+            Debug.LogWarning("Countdown Mode has not been enabled (Automatic Override)");
+        }
+        countdownTimer = countdownDuration; // Initialize countdown timer
+        countdownMode = true;
+        countdownSet = true;
     }
 
     private void Update()
     {
-
-        Debug.Log("ttttttt");
-        if (countdownMode)
+        if (countdownSet)
         {
             countdownTimer -= Time.deltaTime;
+            //Debug.Log(countdownTimer.ToString());
             if (countdownTimer <= 0f && !hasExploded)
             {
                 Explode();
@@ -54,13 +57,7 @@ public class ExplosionSimulation : MonoBehaviour
         }
     }
 
-    public void TriggerExplosion()
-    {
-        if (!hasExploded && instantMode)
-        {
-            Explode();
-        }
-    }
+   
 
     private void Explode()
     {
