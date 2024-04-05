@@ -6,25 +6,28 @@ using System.Threading;
 
 public class SimpleExplosion : MonoBehaviour
 {
+    // Countdown Mode Settings
+    public bool countdownMode = true; // Toggle countdown mode on/off
+    public float countdownDuration = 3f; // Countdown duration in seconds
+
+    private bool countdownSet = false; // Countdown prep ready
+    private float countdownTimer; // Internal countdown timer variable
+
+    // Instant Mode Settings
+    public bool instantMode = false; // Toggle instant mode on/off
+
+    private bool hasExploded = false;
+
+    // Particle Settings
     public Shader explosionShader; // Shader for explosion particles
     public int numberOfParticles = 100; // Number of particles to emit
     public float explosionForce = 10f; // Force of the explosion applied to particles
     public bool removeObjectOnExplosion = true; // Remove the object when exploded
     public ScaleDecrease particleScaleScript; // Reference to the ScaleDecrease script
-
-
-    // Countdown Mode Settings
-    public bool countdownMode = true; // Toggle between countdown mode and instant mode
-    public float countdownDuration = 3f; // Countdown duration in seconds
-
-    private bool countdownSet = false; // Countdown prep ready
-
-    // Instant Mode Settings
-    public bool instantMode = false; // Toggle between countdown mode and instant mode
-
-    private bool hasExploded = false;
     private List<GameObject> particles = new List<GameObject>(); // List to store the emitted particles
-    private float countdownTimer; // Internal countdown timer variable
+
+    // Secondary Script Activation
+    public MonoBehaviour secondaryScript; // 
 
 
     public void GrenadeStart()
@@ -82,6 +85,7 @@ public class SimpleExplosion : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+
 
             hasExploded = true;
         }
