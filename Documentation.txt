@@ -1,2 +1,16 @@
-Unity Terrain
-https://assetstore.unity.com/packages/3d/environments/unity-terrain-urp-demo-scene-213197
+Assets used in the EI Project
+
+EasyRoads3D Free v3
+https://assetstore.unity.com/packages/3d/characters/easyroads3d-free-v3-987
+
+STINGRAY - Volumetric Fog - God Rays - Procedural Sky - Clouds - Lighting URP
+https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/stingray-volumetric-fog-god-rays-procedural-sky-clouds-lighting--207193
+
+Nature Starter Kit 2
+https://assetstore.unity.com/packages/3d/environments/nature-starter-kit-2-52977
+
+Hand Painted Nature Kit LITE
+https://assetstore.unity.com/packages/3d/environments/hand-painted-nature-kit-lite-69220
+
+Simple Water Shader URP
+https://assetstore.unity.com/packages/2d/textures-materials/water/simple-water-shader-urp-191449
