@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 public class ExplosionHitDetection : MonoBehaviour
@@ -6,9 +7,9 @@ public class ExplosionHitDetection : MonoBehaviour
     public float explosionForce = 100f;
     public int damage = 10;
 
-    void Explode(Vector3 position)
+    public void Explode()
     {
-        position = this.transform.position;
+        Vector3 position = this.transform.position;
 
         // Create a sphere collider temporarily
         Collider[] colliders = Physics.OverlapSphere(position, explosionRadius);
@@ -20,7 +21,7 @@ public class ExplosionHitDetection : MonoBehaviour
             if (destructible != null)
             {
                 // Apply damage to the destructible object
-                destructible.TakeDamage(damage);
+                //destructible.TakeDamage(damage);
 
                 // Calculate direction from the explosion to the object
                 Vector3 direction = hit.transform.position - position;
@@ -36,6 +37,8 @@ public class ExplosionHitDetection : MonoBehaviour
                 if(destructible.isInvincible == false)
                 {
                     //damage it
+                    // Apply damage to the destructible object
+                    destructible.TakeDamage(damage);
                 }
 
                 // You can add additional calculations for applying force based on the angle if needed

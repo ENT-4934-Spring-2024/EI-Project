@@ -26,9 +26,7 @@ public class SimpleExplosion : MonoBehaviour
     public ScaleDecrease particleScaleScript; // Reference to the ScaleDecrease script
     private List<GameObject> particles = new List<GameObject>(); // List to store the emitted particles
 
-    // Secondary Script Activation
-    public MonoBehaviour secondaryScript; // 
-
+   
 
     public void GrenadeStart()
     {
@@ -79,6 +77,13 @@ public class SimpleExplosion : MonoBehaviour
 
             // Emit particles
             EmitParticles();
+
+            // Trigger hit detection script
+            ExplosionHitDetection detect = this.gameObject.GetComponent<ExplosionHitDetection>();
+            detect.Explode();
+
+            //ExplosionHitDetection explosionHitDetection = new ExplosionHitDetection();
+
 
             // Remove the object if enabled
             if (removeObjectOnExplosion)

@@ -19,7 +19,7 @@ public class DestructibleObject : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
+        
         if (currentHealth <= 0)
         {
             DestroyObject();
@@ -32,5 +32,5 @@ public class DestructibleObject : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public 
+     
 }
