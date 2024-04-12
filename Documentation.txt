@@ -42,3 +42,5 @@ Locker [https://assetstore.unity.com/packages/3d/props/locker-56405]
 
 Desert Buildings Modular [https://assetstore.unity.com/packages/3d/environments/urban/desert-buildings-modular-144178]
 
+Ammo Crate Wood Ammunition Box [https://assetstore.unity.com/packages/3d/props/weapons/ammo-crate-wood-ammunition-box-90071]
+
