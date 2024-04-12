@@ -21,3 +21,10 @@ ZIL 130 Military truck [https://assetstore.unity.com/packages/3d/vehicles/land/z
 Military Vehicle [https://assetstore.unity.com/packages/3d/vehicles/land/military-vehicle-9225]
 
 Terrain Sample Asset Pack [https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808]
+
+EasyRoads3D Free v3 [https://assetstore.unity.com/packages/3d/characters/easyroads3d-free-v3-987]
+
+Industrial Models [https://assetstore.unity.com/packages/3d/props/industrial/industrial-models-171071]
+
+Industrial Props Kit [https://assetstore.unity.com/packages/3d/props/industrial/industrial-props-kit-84745]
+
