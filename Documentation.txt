@@ -11,4 +11,8 @@ https://polyhaven.com/a/ceiling_interior
 https://assetstore.unity.com/packages/3d/props/weapons/hq-kitchen-rusty-knife-83994
 https://assetstore.unity.com/packages/3d/props/tools/horror-axe-107507
 https://polyhaven.com/a/electric_stove
+https://polyhaven.com/a/Shelf_01
+https://polyhaven.com/a/painted_wooden_table
+https://polyhaven.com/a/painted_wooden_cabinet_02
+https://polyhaven.com/a/painted_wooden_chair_02
 
