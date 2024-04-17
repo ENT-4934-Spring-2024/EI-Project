@@ -21,11 +21,8 @@ namespace MimicSpace
         Mimic myMimic;
 
         //--------------- my code -------------------//
-        public string playerTag = "Player";
-        private Vector3 initialPlayerPosition; // Initial position of the player
-        private Transform playerTransform;
-        private float followTimer = 0f; // Timer to track the follow duration
-        public float followDuration = 5f; // Duration for which the mimic follows the player
+        public float directionChangeInterval = 10f; // Time interval for changing direction
+        private float timer;
         //--------------------------------------------//
 
 
@@ -34,7 +31,12 @@ namespace MimicSpace
             myMimic = GetComponent<Mimic>();
 
             //my code
-            initialPlayerPosition = playerTransform.position;
+            // Initialize the timer
+            timer = directionChangeInterval;
+
+            // Start the mimic moving in a random direction initially
+            ChangeDirection();
+
         }
 
         void Update()
@@ -42,24 +44,18 @@ namespace MimicSpace
             //--------------- my code -------------------//
             // direction of movement
 
-            // Update the follow timer
-            followTimer += Time.deltaTime;
+            // Reduce the timer
+            timer -= Time.deltaTime;
 
-            if (playerTransform != null)
+            // If the timer has expired, change direction
+            if (timer <= 0f)
             {
-                // Check if the follow duration has not elapsed
-                if (followTimer < followDuration)
-                {
-                    // Calculate direction to the player's initial position
-                    Vector3 direction = playerTransform.position - transform.position; direction.y = 0f;
-                    // Ignore vertical movement
-
-                    // Smoothly move the mimic towards the player's initial position
-                    transform.Translate(direction.normalized * speed * Time.deltaTime);
-
-                    followTimer += Time.deltaTime;
-                }
+                ChangeDirection();
+                timer = directionChangeInterval; // Reset the timer
             }
+
+            // Update the position based on the current velocity
+            transform.position += velocity * Time.deltaTime;
 
             //velocity = Vector3.Lerp(velocity, new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized * speed, velocityLerpCoef * Time.deltaTime);
 
@@ -81,6 +77,18 @@ namespace MimicSpace
                 destHeight = new Vector3(transform.position.x, hit.point.y + height, transform.position.z);
             }
             transform.position = Vector3.Lerp(transform.position, destHeight, velocityLerpCoef * Time.deltaTime);
+        }
+
+        void ChangeDirection()
+        {
+            // Generate a random direction
+            Vector3 randomDirection = Random.insideUnitSphere.normalized;
+
+            // Ensure the Y component is 0 to move only on the XZ plane
+            randomDirection.y = 0f;
+
+            // Set the new velocity based on the random direction and speed
+            velocity = randomDirection * speed;
         }
     }
 
