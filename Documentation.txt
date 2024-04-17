@@ -20,4 +20,5 @@ https://polyhaven.com/a/wooden_spoon
 https://polyhaven.com/a/pot_enamel_01
 https://polyhaven.com/a/brass_pan_01
 https://polyhaven.com/a/brass_goblets
-
+https://polyhaven.com/a/rusty_metal_sheet
+https://polyhaven.com/a/painted_plaster_wall
