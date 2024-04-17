@@ -19,12 +19,20 @@ public class SimpleExplosion : MonoBehaviour
     private bool hasExploded = false;
 
     // Particle Settings
+    public bool enableParticles; // Enable/Disable particles for explosion simulation
     public Shader explosionShader; // Shader for explosion particles
     public int numberOfParticles = 100; // Number of particles to emit
     public float explosionForce = 10f; // Force of the explosion applied to particles
     public bool removeObjectOnExplosion = true; // Remove the object when exploded
     public ScaleDecrease particleScaleScript; // Reference to the ScaleDecrease script
     private List<GameObject> particles = new List<GameObject>(); // List to store the emitted particles
+
+    // Sound
+    public AudioSource sound;
+    public AudioClip test;
+
+    // Animation
+    public Animation visual;
 
    
 
@@ -75,8 +83,16 @@ public class SimpleExplosion : MonoBehaviour
                 }
             }
 
+            //visual.Play(); // Play explosion animation
+            sound.Play(); // Play explosion audio
+
+           
+
             // Emit particles
-            EmitParticles();
+            if (enableParticles)
+            {
+                EmitParticles();    
+            }
 
             // Trigger hit detection script
             ExplosionHitDetection detect = this.gameObject.GetComponent<ExplosionHitDetection>();
