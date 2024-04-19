@@ -29,10 +29,10 @@ public class SimpleExplosion : MonoBehaviour
 
     // Sound
     public AudioSource sound;
-    public AudioClip test;
 
-    // Animation
-    public Animation visual;
+    // instantiate gameobject
+    public GameObject explosion;
+    
 
    
 
@@ -86,6 +86,9 @@ public class SimpleExplosion : MonoBehaviour
             //visual.Play(); // Play explosion animation
             sound.Play(); // Play explosion audio
 
+
+            Instantiate(explosion); // Create explosion animation
+
            
 
             // Emit particles
@@ -104,7 +107,7 @@ public class SimpleExplosion : MonoBehaviour
             // Remove the object if enabled
             if (removeObjectOnExplosion)
             {
-                Destroy(gameObject);
+                //Destroy(gameObject); 
             }
 
 
