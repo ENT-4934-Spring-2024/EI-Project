@@ -28,3 +28,7 @@ https://polyhaven.com/a/jug_01
 https://polyhaven.com/a/russian_food_cans_01
 https://polyhaven.com/a/sweet_potato
 https://polyhaven.com/a/CheeseBox_01
+https://polyhaven.com/a/carrot_cake
+https://polyhaven.com/a/painted_wooden_bench
+https://polyhaven.com/a/painted_wooden_shelves
+https://assetstore.unity.com/packages/3d/props/horror-game-bloodied-bucket-prop-279263
