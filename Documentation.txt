@@ -36,4 +36,10 @@ https://assetstore.unity.com/packages/vfx/shaders/spooky-shadergraph-starters-18
 https://assetstore.unity.com/packages/3d/characters/body-splatter-parts-17408
 https://assetstore.unity.com/packages/3d/props/clothing/female-ankle-boots-photoscanned-159578
 https://polyhaven.com/a/drain_cleaner
+https://polyhaven.com/a/bleach_bottle
+https://polyhaven.com/a/all_purpose_cleaner
+https://polyhaven.com/a/lantern_chandelier_01
+https://polyhaven.com/a/vintage_suitcase
+https://polyhaven.com/a/barrel_03
+https://polyhaven.com/a/wicker_basket_01
 
