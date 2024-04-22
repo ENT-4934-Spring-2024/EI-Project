@@ -32,3 +32,8 @@ https://polyhaven.com/a/carrot_cake
 https://polyhaven.com/a/painted_wooden_bench
 https://polyhaven.com/a/painted_wooden_shelves
 https://assetstore.unity.com/packages/3d/props/horror-game-bloodied-bucket-prop-279263
+https://assetstore.unity.com/packages/vfx/shaders/spooky-shadergraph-starters-186292
+https://assetstore.unity.com/packages/3d/characters/body-splatter-parts-17408
+https://assetstore.unity.com/packages/3d/props/clothing/female-ankle-boots-photoscanned-159578
+https://polyhaven.com/a/drain_cleaner
+
