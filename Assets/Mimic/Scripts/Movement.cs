@@ -21,8 +21,10 @@ namespace MimicSpace
         Mimic myMimic;
 
         //--------------- my code -------------------//
-        public float directionChangeInterval = 10f; // Time interval for changing direction
-        private float timer;
+        public Transform player; // Reference to the player's transform
+        public float followDistance = 10f; // Distance threshold for following the player
+        public float teleportRadius = 20f; // Radius for teleporting when too far from the player
+        
         //--------------------------------------------//
 
 
@@ -31,31 +33,50 @@ namespace MimicSpace
             myMimic = GetComponent<Mimic>();
 
             //my code
-            // Initialize the timer
-            timer = directionChangeInterval;
-
-            // Start the mimic moving in a random direction initially
-            ChangeDirection();
+            // Find the player GameObject with the tag "Player"
+            player = GameObject.FindGameObjectWithTag("Player").transform;
 
         }
 
         void Update()
         {
             //--------------- my code -------------------//
-            // direction of movement
 
-            // Reduce the timer
-            timer -= Time.deltaTime;
 
-            // If the timer has expired, change direction
-            if (timer <= 0f)
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+            // Calculate direction towards the player
+            velocity = (player.position - transform.position).normalized;
+
+            myMimic.velocity = velocity;
+
+            RaycastHit hit;
+            Vector3 destHeight = transform.position * height;
+            if (Physics.Raycast(transform.position + Vector3.up * 5f, -Vector3.up, out hit))
             {
-                ChangeDirection();
-                timer = directionChangeInterval; // Reset the timer
+                destHeight = new Vector3(transform.position.x, hit.point.y + height, transform.position.z);
             }
 
+            if (distanceToPlayer < followDistance)
+            {
+                // Move the mimic towards the player
+                transform.position += velocity * speed * Time.deltaTime;
+                transform.position = Vector3.Lerp(transform.position, destHeight, velocityLerpCoef * Time.deltaTime);
+            }
+            else
+            {
+                //teleport mimic to a random position within radius
+                //followDistance MUST be less than teleportRadius !!!
+                transform.position = player.position + Random.insideUnitSphere * teleportRadius;
+            }
+            
+            
+
+            //----------------------------------------//
+
+
             // Update the position based on the current velocity
-            transform.position += velocity * Time.deltaTime;
+            //transform.position += velocity * Time.deltaTime;
 
             //velocity = Vector3.Lerp(velocity, new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized * speed, velocityLerpCoef * Time.deltaTime);
 
@@ -66,8 +87,9 @@ namespace MimicSpace
 
 
             // Assigning velocity to the mimic to assure great leg placement
-            myMimic.velocity = velocity;
+            //myMimic.velocity = velocity;
 
+           /*
             
             transform.position = transform.position + velocity * Time.deltaTime;
             RaycastHit hit;
@@ -77,19 +99,11 @@ namespace MimicSpace
                 destHeight = new Vector3(transform.position.x, hit.point.y + height, transform.position.z);
             }
             transform.position = Vector3.Lerp(transform.position, destHeight, velocityLerpCoef * Time.deltaTime);
+
+            */
         }
 
-        void ChangeDirection()
-        {
-            // Generate a random direction
-            Vector3 randomDirection = Random.insideUnitSphere.normalized;
-
-            // Ensure the Y component is 0 to move only on the XZ plane
-            randomDirection.y = 0f;
-
-            // Set the new velocity based on the random direction and speed
-            velocity = randomDirection * speed;
-        }
+        
     }
 
 }
