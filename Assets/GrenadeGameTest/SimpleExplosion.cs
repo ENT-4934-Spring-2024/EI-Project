@@ -27,14 +27,19 @@ public class SimpleExplosion : MonoBehaviour
     public ScaleDecrease particleScaleScript; // Reference to the ScaleDecrease script
     private List<GameObject> particles = new List<GameObject>(); // List to store the emitted particles
 
+
+
     // Sound
     public AudioSource sound;
 
-    // instantiate gameobject
-    public GameObject explosion;
-    
+    // Explosion Visual
+    public GameObject explosionPrefab;
+    public Transform explosionAnchor;
 
-   
+    public bool explodeNOW;
+
+
+
 
     public void GrenadeStart()
     {
@@ -42,7 +47,7 @@ public class SimpleExplosion : MonoBehaviour
         {
             Explode();
         }
-        
+
 
         if (countdownDuration > 0 && !countdownMode && !instantMode)
         {
@@ -55,6 +60,10 @@ public class SimpleExplosion : MonoBehaviour
 
     private void Update()
     {
+        if (explodeNOW)
+        {
+            Explode();
+        }
         if (countdownSet)
         {
             countdownTimer -= Time.deltaTime;
@@ -66,9 +75,9 @@ public class SimpleExplosion : MonoBehaviour
         }
     }
 
-   
 
-    private void Explode()
+
+    public void Explode()
     {
         if (!hasExploded)
         {
@@ -83,31 +92,49 @@ public class SimpleExplosion : MonoBehaviour
                 }
             }
 
-            //visual.Play(); // Play explosion animation
-            sound.Play(); // Play explosion audio
+            if (renderer != null)
+            {
+                renderer.enabled = false;
+            }
+
+            if (sound != null)
+            {
+                sound.Play(); // Play explosion audio
+            }
 
 
-            Instantiate(explosion); // Create explosion animation
+            //Instantiate(explosion, this.transform); // Create explosion animation
+            if (explosionPrefab != null)
+            {
+                // Instantiate explosion prefab as a child of the explosion anchor
+                GameObject explosion = Instantiate(explosionPrefab, explosionAnchor.position, Quaternion.identity, explosionAnchor);
 
-           
+                // Set local transform to remain on the object
+                explosion.transform.localPosition = Vector3.zero;
+
+                // Set global rotation to always point upwards
+                explosion.transform.rotation = Quaternion.Euler(Vector3.up);
+            }
+            
+
 
             // Emit particles
             if (enableParticles)
             {
-                EmitParticles();    
+                EmitParticles();
             }
 
             // Trigger hit detection script
             ExplosionHitDetection detect = this.gameObject.GetComponent<ExplosionHitDetection>();
             detect.Explode();
 
-            //ExplosionHitDetection explosionHitDetection = new ExplosionHitDetection();
+
 
 
             // Remove the object if enabled
             if (removeObjectOnExplosion)
             {
-                //Destroy(gameObject); 
+                Destroy(gameObject, 3f); 
             }
 
 

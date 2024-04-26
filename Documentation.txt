@@ -46,3 +46,5 @@ Ammo Crate Wood Ammunition Box [https://assetstore.unity.com/packages/3d/props/w
 
 Low-Poly 3D Lockers [https://assetstore.unity.com/packages/3d/props/interior/low-poly-3d-lockers-239681]
 
+Desert ambience - waterhole birds & insects (Calm) SmartSound FX [https://uppbeat.io/sfx/desert-ambience-waterhole-birds-insects-calm/1655/1509?_gl=1*10jdtsq*_up*MQ..*_ga*MTg3MjYwMzA4My4xNzE0MTQxMDk2*_ga_J12MEFBDB7*MTcxNDE0MTA5NS4xLjAuMTcxNDE0MTA5NS4wLjAuNjI1ODQxOTI2]
+
