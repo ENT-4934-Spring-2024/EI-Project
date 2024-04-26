@@ -1,0 +1,255 @@
+# 3ds Max Wavefront OBJ Exporter v0.99 - (c)2007 guruware
+# File Created: 09.01.2022 21:32:02
+
+newmtl Material__27
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 1.000000 1.000000 1.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\groundbasebricks_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\groundbasebricks_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\groundbasebricks_DefaultMaterial_Normal.png
+
+newmtl Material__25
+	Ns 52.142860
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 1.000000 1.000000 1.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\groundtile_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\groundtile_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\groundtile_DefaultMaterial_Normal.png
+
+newmtl Material__26
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 1.000000 1.000000 1.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\groundtilebase_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\groundtilebase_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\groundtilebase_DefaultMaterial_Normal.png
+
+newmtl Material__48
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 1.000000 1.000000 1.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\stumpbase_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\stumpbase_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\stumpbase_DefaultMaterial_Normal.png
+
+newmtl Material__52
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.000000 0.000000 0.000000
+	Kd 0.000000 0.000000 0.000000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_d E:\[MODELS]\Palace\textures\stumpAO_Material _50_BaseColorAlpha.png
+
+newmtl Material__55
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\buildingwoodpost_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\buildingwoodpost_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\buildingwoodpost_DefaultMaterial_Normal.png
+
+newmtl Material__57
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\wall1_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\wall1_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\wall1_DefaultMaterial_Normal.png
+
+newmtl Material__59
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\wall2_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\wall2_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\wall2_DefaultMaterial_Normal.png
+
+newmtl Material__63
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\ceilingbottom_Material _60_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\ceilingbottom_Material _60_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\ceilingbottom_Material _60_Normal.png
+
+newmtl Material__61
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\ceilingbase_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\ceilingbase_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\ceilingbase_DefaultMaterial_Normal.png
+
+newmtl Material__67
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\bottomceilings_Material _60_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\bottomceilings_Material _60_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\bottomceilings_Material _60_Normal.png
+
+newmtl Material__60
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\coloredlogs_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\coloredlogs_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\coloredlogs_DefaultMaterial_Normal.png
+
+newmtl Material__54
+	Ns 46.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.581176 0.581176 0.581176
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\roof_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\roof_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\roof_DefaultMaterial_Normal.png
+
+newmtl Material__64
+	Ns 50.000000
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 1.000000 1.000000 1.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\floor_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\floor_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\floor_DefaultMaterial_Normal.png
+
+newmtl Material__58
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\sign_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\sign_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\sign_DefaultMaterial_Normal.png
+
+newmtl Material__68
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\bottomceilings_Material _63_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\bottomceilings_Material _63_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\bottomceilings_Material _63_Normal.png
+
+newmtl Material__56
+	Ns 71.428574
+	Ni 1.600000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.500000 0.500000 0.500000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\[MODELS]\Palace\textures\windowsmall_DefaultMaterial_BaseColor.png
+	map_Kd E:\[MODELS]\Palace\textures\windowsmall_DefaultMaterial_BaseColor.png
+	norm E:\[MODELS]\Palace\textures\windowsmall_DefaultMaterial_Normal.png
